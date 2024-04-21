@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🍴 CookTube 🍴</title>
+    <!-- Bulma cdn link to access CSS framework -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css"
+    />
+    <!-- Applying google fonts to the smaller font paragraphs -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Galada&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Swiper cdn link to access swiper css styling -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- <link rel="stylesheet" href="./assets/css/style.css" /> -->
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <header>
+      <div class="box">
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+          <div class="navbar-brand">
+            <a
+              role="button"
+              class="navbar-burger"
+              aria-label="menu"
+              aria-expanded="false"
+              data-target="navbarBasicExample"
+            >
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+            </a>
+          </div>
+          <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+              <a id="homePage" class="navbar-item">Home</a>
+              <a id="modal-button" class="navbar-item">My Pantry 🍳</a>
+              <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">More</a>
+                <div class="navbar-dropdown">
+                  <a id="aboutUsPage" class="navbar-item">About Us</a>
+                  <a id="contactPage" class="navbar-item">Contact</a>
+                  <hr class="navbar-divider" />
+                  <a class="navbar-item more-button">Report an issue</a>
+                </div>
+              </div>
+            </div>
+            <div class="navbar-end">
+              <div class="navbar-item">
+                <div class="buttons">
+                  <a id="gitPage" class="button is-primary github-button"
+                    >GitHub</a
+                  >
+                  <a id="mode-toggle" class="button is-light"
+                    ><strong>🌙</strong></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero-box">
+      <div class="container">
+        <div class="columns is-vcentered">
+          <div class="column">
+            <h2 class="title">🍴 CookTube 🍴</h2>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <main class="columns box mx-3">
+      <!-- Side menu -->
+      <article class="column is-one-fifth">
+        <aside class="menu has-text-centered">
+          <p class="menu-label is-size-4">Your Menu!</p>
+          <ul class="menu-list"></ul>
+          <div class="spacer">
+            <p>Favourites</p>
+            <ul class="menu-list" id="favourites"></ul>
+          </div>
+
+          <div class="spacer">
+            <p>Your requested recipes will show here:</p>
+          </div>
+          <ul class="menu-list" id="recipe-buttons"></ul>
+        </aside>
+      </article>
+
+      <!-- Recipe info -->
+      <article class="column is-one-fifth">
+        <div style="text-align: center">
+          <h1 id="recipe-name"></h1>
+          <button
+            class="button is-invisible is-small has-text-black mt-2"
+            id="fav-button"
+          >
+            Favourite
+          </button>
+        </div>
+        <div id="recipe-ingredients"></div>
+        <div id="recipe-info"></div>
+      </article>
+
+      <!-- Recipe images and videos -->
+      <article class="column is-three-fifths">
+        <div id="recipe-info-container">
+          <img id="recipe-picture" />
+          <iframe
+            class="has-ratio is-flex-direction-row is-flex-grow-1"
+            src=""
+            frameborder="0"
+            allowfullscreen
+            id="yt-video"
+          ></iframe>
+          <div id="recipe-summary"></div>
+        </div>
+      </article>
+    </main>
+
+    <!-- CAROUSEL RESPONSIVE SLIDER -->
+    <section id="carousel-row" class="columns mx-3 is-flex-direction-row">
+      <div id="trending">
+        <h2 class="has-text-centered">POPULAR RECIPES OF THE WEEK</h2>
+        <h2 id="recipeTitle" class="has-text-centered"></h2>
+        <div class="container-carousel">
+          <div class="swiper trending-slider">
+            <div class="swiper-wrapper">
+              <!-- SLIDE 1 -->
+              <article class="swiper-slide trending-slide">
+                <div class="trending-slide-img recipeRandom">
+                  <img src="" class="imgs" loading="lazy" />
+                </div>
+              </article>
+              <!-- SLIDE 2 -->
+              <article class="swiper-slide trending-slide">
+                <div class="trending-slide-img recipeRandom">
+                  <img src="" class="imgs" loading="lazy" />
+                </div>
+              </article>
+              <!-- SLIDE 3 -->
+              <article class="swiper-slide trending-slide">
+                <div class="trending-slide-img recipeRandom">
+                  <img src="" class="imgs" loading="lazy" />
+                </div>
+              </article>
+              <!-- SLIDE 4 -->
+              <article class="swiper-slide trending-slide">
+                <div class="trending-slide-img recipeRandom">
+                  <img src="" class="imgs" loading="lazy" />
+                </div>
+              </article>
+              <!-- SLIDE 5 -->
+              <article class="swiper-slide trending-slide">
+                <div class="trending-slide-img recipeRandom">
+                  <img src="" class="imgs" loading="lazy" />
+                </div>
+              </article>
+              <!-- SLIDE 6 -->
+              <article class="swiper-slide trending-slide">
+                <div class="trending-slide-img recipeRandom">
+                  <img src="" class="imgs" loading="lazy" />
+                </div>
+              </article>
+              <!-- SLIDE 7 -->
+              <article class="swiper-slide trending-slide">
+                <div class="trending-slide-img recipeRandom">
+                  <img src="" class="imgs" loading="lazy" />
+                </div>
+              </article>
+              <!-- SLIDE 8 -->
+              <article class="swiper-slide trending-slide">
+                <div class="trending-slide-img recipeRandom">
+                  <img src="" class="imgs" loading="lazy" />
+                </div>
+              </article>
+              <!-- SLIDE 9 -->
+              <article class="swiper-slide trending-slide">
+                <div class="trending-slide-img recipeRandom">
+                  <img src="" class="imgs" loading="lazy" />
+                </div>
+              </article>
+              <!-- SLIDE 10 -->
+              <article class="swiper-slide trending-slide">
+                <div class="trending-slide-img recipeRandom">
+                  <img src="" class="imgs" loading="lazy" />
+                </div>
+              </article>
+              <!-- SLIDE 11 -->
+              <article class="swiper-slide trending-slide">
+                <div class="trending-slide-img recipeRandom">
+                  <img src="" class="imgs" loading="lazy" />
+                </div>
+              </article>
+              <!-- SLIDE 12 -->
+              <article class="swiper-slide trending-slide">
+                <div class="trending-slide-img recipeRandom">
+                  <img src="" class="imgs" loading="lazy" />
+                </div>
+              </article>
+              <!-- SLIDE 13 -->
+              <article class="swiper-slide trending-slide">
+                <div class="trending-slide-img recipeRandom">
+                  <img src="" class="imgs" loading="lazy" />
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODAL -->
+    <section class="modal" id="search-modal">
+      <div class="modal-background"></div>
+      <div class="modal-content">
+        <form id="search-form">
+          <!-- Select Menu -->
+          <article class="field">
+            <label class="label has-text-primary">Search Options</label>
+            <div class="control">
+              <div class="select">
+                <select id="search-select">
+                  <option>By Recipe Name</option>
+                  <option>By Ingredient</option>
+                </select>
+              </div>
+            </div>
+          </article>
+
+          <!-- Input field -->
+          <article class="field">
+            <label class="label has-text-primary">Search Here:</label>
+            <div class="control" id="form-inputs">
+              <input
+                class="input"
+                type="text"
+                placeholder="What would you like to cook today?"
+                id="input-ingredient"
+              />
+            </div>
+
+            <!-- Vegetarian check -->
+            <div class="field" id="vegetarian-div">
+              <div class="control mt-4">
+                <label class="checkbox">
+                  <input type="checkbox" id="vegetarian-check" />
+                  <span class="has-text-primary">Vegetarian</span>
+                </label>
+              </div>
+            </div>
+
+            <div id="ing-button-div" class="is-invisible">
+              <button
+                class="button has-text-black mb-5"
+                id="add-ingredient-button"
+              >
+                Add Ingredient
+              </button>
+            </div>
+          </article>
+
+          <!-- Submit/Close buttons -->
+          <article class="field is-grouped">
+            <div class="control">
+              <button class="button is-link has-text-black">Submit</button>
+            </div>
+            <div class="control">
+              <button class="button is-link has-text-black" id="close-form">
+                Cancel
+              </button>
+            </div>
+          </article>
+        </form>
+      </div>
+      <button
+        class="modal-close is-large"
+        id="close-modal"
+        aria-label="close"
+      ></button>
+    </section>
+
+    <footer>Made with love by Mitra</footer>
+    <!-- Cdn link to access swiper carousel animation -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
